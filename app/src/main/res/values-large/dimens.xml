@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
+
+    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="list_text_size">12sp</dimen>
+    <dimen name="note_text_size">18sp</dimen>
+    <dimen name="name_text_size">24sp</dimen>
+
+    <dimen name="item_margin">5dp</dimen>
+    <dimen name="standart_padding">10dp</dimen>
+    <dimen name="standart_margin">16dp</dimen>
+    <dimen name="flag_height">60dp</dimen>
+    <dimen name="flag_width">90dp</dimen>
+    <dimen name="top_bar_height">55dp</dimen>
+
+</resources>

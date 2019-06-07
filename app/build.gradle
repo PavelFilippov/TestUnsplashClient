@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "ru.com.testunsplashclient"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    appCompatLibraryVersion = "1.0.2"
+    coreLibraryVersion = "1.2.0-alpha01"
+    mutliDexLibraryVersion = "2.0.1"
+    constraintLayoutVersion = "1.1.3"
+    materialDesignVersion = "1.1.0-alpha07"
+    recyclerViewVersion = "1.0.0"
+    moxyVersion = "1.5.6"
+    moxyAndroidXVersion = "1.7.0"
+    ciceroneVersion = "5.0.0"
+    rxJavaVersion = "2.1.6"
+    rxAndroidVersion = "2.1.0"
+    daggerVersion = "2.14.1"
+    retrofit2Version = "2.4.0"
+    okhttp3Version = "3.11.0"
+    gsonVersion = "2.8.5"
+    lombokVersion = "1.16.20"
+    androidAnnotationsVersion = "4.6.0"
+    glideVersion = "4.9.0"
+    eventBusVersion = "3.1.1"
+    smoothProgressBarVersion = "1.1.0"
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.core:core:$coreLibraryVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.multidex:multidex:$mutliDexLibraryVersion"
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    //Moxy
+    implementation "tech.schoolhelper:moxy-x:$moxyAndroidXVersion"
+    implementation "tech.schoolhelper:moxy-x-androidx:$moxyAndroidXVersion"
+    annotationProcessor "tech.schoolhelper:moxy-x-compiler:$moxyAndroidXVersion"
+
+    //Cicerone
+    implementation "ru.terrakok.cicerone:cicerone:$ciceroneVersion"
+
+    // RxJava and RxAndroid
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+
+    //Dagger2
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //Retrofit 2
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2Version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    //AndroidAnnotations
+    annotationProcessor "org.androidannotations:androidannotations:$androidAnnotationsVersion"
+    implementation "org.androidannotations:androidannotations-api:$androidAnnotationsVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    // EventBus
+    implementation "org.greenrobot:eventbus:$eventBusVersion"
+
+    //Croutone
+    implementation('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+
+    //Smooth Bottom Loader
+    implementation "com.github.castorflex.smoothprogressbar:library:$smoothProgressBarVersion"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

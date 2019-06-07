@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="app_name">Test Unsplash Client</string>
+
+    <string name="error">Error</string>
+    <string name="server_error">Server Error</string>
+    <string name="database_error">Database Error</string>
+    <string name="no_name">No Name</string>
+    <string name="no_description">No Description</string>
+    <string name="network_connection_established">Network connection established</string>
+    <string name="network_connection_lost">Network connection lost</string>
+    <string name="error_occurred_while_loading_photos">Error occurred while loading photos</string>
+    <string name="no_favourite_photos_at_this_time">No favourite photos at this time</string>
+    <string name="error_occurred_while_loading_photo">Error occurred while loading photo</string>
+    <string name="likes_">Likes: %d</string>
+
+    <string name="phone_">Phone: %s</string>
+    <string name="email_">Email: %s</string>
+    <string name="stack_">Stack: %s</string>
+
+    <string name="author_name">Pavel Filippov</string>
+    <string name="author_phone">+7 978 743 95 65</string>
+    <string name="author_email">re-krut@yandex.ru</string>
+    <string name="stack">\nMoxy\nCicerone\nRxJava2\nDagger2\nAndroid Annotations\nRetrofit2\nGlide\nEvent Bus\nCrouton\nSmoothProgressBar</string>
+
+    <string name="photo">Photo</string>
+    <string name="favourites">Favourites</string>
+    <string name="info">Info</string>
+
+</resources>
